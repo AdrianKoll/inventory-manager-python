@@ -2,7 +2,7 @@ import sqlite3 as lite
 import sqlite3
 
 # Conectar ao banco de dados =================================
-con = lite.connect("dados.db")
+con = lite.connect("database/date.db")
 
 # Inserir dados =================================
 def inserir_form(i):
@@ -23,7 +23,7 @@ def atualizar_(i):
 # Deletar um registro específico e reorganizar os IDs =================================
 def deletar_form(i):
     # Conectando ao banco de dados
-    with sqlite3.connect("dados.db") as con:
+    with sqlite3.connect("database/date.db") as con:
         cur = con.cursor()
 
         # Passo 1: Excluir o item com o ID especificado

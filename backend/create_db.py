@@ -1,7 +1,7 @@
 import sqlite3 as lite
 
 # Criando conexao
-con = lite.connect('dados.db')
+con = lite.connect('database/date.db')
 
 # Excluindo e criando tabela
 with con:

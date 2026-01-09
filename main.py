@@ -11,21 +11,8 @@ from tkcalendar import DateEntry
 from datetime import date
 
 # Importações de módulos personalizados
-from crud_db import *
-
-# Cores elegantes em tons de roxo
-indigo = "#4B0082"
-royal_purple = "#6A0DAD"
-purple = "#800080"
-medium_purple = "#9370DB"
-blue_violet = "#8A2BE2"
-dark_orchid = "#9932CC"
-medium_orchid = "#BA55D3"
-thistle = "#D8BFD8"
-plum = "#DDA0DD"
-lavender = "#E6E6FA"
-black = "#000000"
-white = "#FFFFFF"
+from backend.crud import *
+from frontend.color import *
 
 # Criando janela ==============================
 janela = Tk()
@@ -165,7 +152,7 @@ def atualizar():
 
             mostrar()
 
-        img_confirmar = Image.open('icones//icone_6.png')
+        img_confirmar = Image.open('frontend/Icones//icone_6.png')
         img_confirmar = img_confirmar.resize((20, 20))
         img_confirmar = ImageTk.PhotoImage(img_confirmar)
         b_botao_confirmar = Button(frame_2, command=update, image=img_confirmar, width=95, text="  CONFIRMAR".upper(), compound=LEFT, anchor=NW, overrelief=RIDGE, font=("Ivy 8"), bg=white, fg=black)
@@ -220,7 +207,7 @@ def Deletar():
         return
 
     # Criando o botão de confirmação de exclusão
-    img_deletar = Image.open('icones//icone_6.png')
+    img_deletar = Image.open('frontend/Icones//icone_6.png')
     img_deletar = img_deletar.resize((20, 20))
     img_deletar = ImageTk.PhotoImage(img_deletar)
 
@@ -294,7 +281,7 @@ def ver_imagem():
         messagebox.showerror("Erro", f"A imagem '{caminho_imagem}' não foi encontrada.")
 
 # Adicionando imagem e título ==============================
-app = Image.open('icones//icone_1.png')
+app = Image.open('frontend/Icones//icone_1.png')
 app = app.resize((45, 45))
 app = ImageTk.PhotoImage(app)
 app_logo = Label(frame_1, image=app, text="Cadastramento de Vendas", width=900, compound=LEFT, relief=RAISED, anchor=NW,
@@ -345,25 +332,25 @@ b_botao_imagem = Button(frame_2,command=escolher_imagem, width=29, text="Carrega
 b_botao_imagem.place(x=130, y=189)
 
 # Botões de ação
-img_adicionar = Image.open('icones//icone_2.png')
+img_adicionar = Image.open('frontend/Icones//icone_2.png')
 img_adicionar = img_adicionar.resize((20, 20))
 img_adicionar = ImageTk.PhotoImage(img_adicionar)
 b_botao_adicionar = Button(frame_2, command=inserir, image=img_adicionar, width=95, text="  ADICIONAR".upper(), compound=LEFT, anchor=NW, overrelief=RIDGE, font=("Ivy 8"), bg=white, fg=black,)
 b_botao_adicionar.place(x=330, y=10)
 
-img_atualizar = Image.open('icones//icone_3.png')
+img_atualizar = Image.open('frontend/Icones//icone_3.png')
 img_atualizar = img_atualizar.resize((20, 20))
 img_atualizar = ImageTk.PhotoImage(img_atualizar)
 b_botao_atualizar = Button(frame_2, command=atualizar, image=img_atualizar, width=95, text="  ATUALIZAR".upper(), compound=LEFT, anchor=NW, overrelief=RIDGE, font=("Ivy 8"), bg=white, fg=black)
 b_botao_atualizar.place(x=330, y=45)
 
-img_deletar = Image.open('icones//icone_4.png')
+img_deletar = Image.open('frontend/Icones//icone_4.png')
 img_deletar = img_deletar.resize((20, 20))
 img_deletar = ImageTk.PhotoImage(img_deletar)
 b_botao_deletar = Button(frame_2,command=Deletar, image=img_deletar, width=95, text="  DELETAR".upper(), compound=LEFT, anchor=NW, overrelief=RIDGE, font=("Ivy 8"), bg=white, fg=black)
 b_botao_deletar.place(x=330, y=80)
 
-img_ver = Image.open('icones//icone_5.png')
+img_ver = Image.open('frontend/Icones//icone_5.png')
 img_ver = img_ver.resize((20, 20))
 img_ver = ImageTk.PhotoImage(img_ver)
 b_botao_ver = Button(frame_2, command=ver_imagem, image=img_ver, width=95, text="  VER ITEM".upper(), compound=LEFT, anchor=NW, overrelief=RIDGE, font=("Ivy 8"), bg=white, fg=black)

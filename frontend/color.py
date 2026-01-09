@@ -1,0 +1,13 @@
+# Cores elegantes em tons de roxo
+indigo = "#4B0082"
+royal_purple = "#6A0DAD"
+purple = "#800080"
+medium_purple = "#9370DB"
+blue_violet = "#8A2BE2"
+dark_orchid = "#9932CC"
+medium_orchid = "#BA55D3"
+thistle = "#D8BFD8"
+plum = "#DDA0DD"
+lavender = "#E6E6FA"
+black = "#000000"
+white = "#FFFFFF"
